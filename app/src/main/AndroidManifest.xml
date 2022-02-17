@@ -10,10 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RealUno">
         <activity
-            android:name=".HomeScreen"
+            android:name=".Play"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
+            android:label="@string/title_activity_play"
+            android:theme="@style/Theme.RealUno.Fullscreen" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="true"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/Theme.RealUno.NoActionBar" />
+            android:theme="@style/Theme.RealUno.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
     </application>
 
 </manifest>

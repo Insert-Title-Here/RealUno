@@ -1,5 +1,6 @@
 package com.example.realuno;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -7,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -40,6 +42,21 @@ public class HomeScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        nextButtonClick();
+    }
+
+    private void nextButtonClick(){
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v){
+                        Intent i = new Intent(HomeScreen.this, Play.class);
+                        startActivity(i);
+                    }
+                }
+        );
     }
 
     @Override
