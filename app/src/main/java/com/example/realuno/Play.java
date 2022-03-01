@@ -12,6 +12,7 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
+import android.widget.Button;
 
 import com.example.realuno.databinding.ActivityPlayBinding;
 
@@ -121,13 +122,36 @@ public class Play extends AppCompatActivity {
             public void onClick(View view) {
                 toggle();
             }
+
+
+
+
         });
+        backButtonClick();
+
+
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
     }
+
+
+
+    private void backButtonClick(){
+        Button button = findViewById(R.id.button2);
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v){
+                        finish();
+
+                    }
+                }
+        );
+    }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
