@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RealUno">
         <activity
+            android:name=".TestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.RealUno.NoActionBar" />
+        <activity
             android:name=".Play"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
@@ -20,15 +25,12 @@
             android:exported="true"
             android:label="@string/title_activity_home_screen"
             android:theme="@style/Theme.RealUno.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-
     </application>
 
 </manifest>
