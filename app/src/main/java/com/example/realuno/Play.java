@@ -130,14 +130,16 @@ public class Play extends AppCompatActivity {
 
         });
         backButtonClick();
-        imageButtonClick();
+        //imageButtonClick();
+        nextButtonClick();
+
 
 
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
+        //binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
     }
 
 
@@ -155,7 +157,22 @@ public class Play extends AppCompatActivity {
         );
     }
 
-    private void imageButtonClick(){
+    private void nextButtonClick(){
+        Button button = findViewById(R.id.card);
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v){
+                        Intent intent = new Intent(Play.this, TestActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
+
+
+    /*private void imageButtonClick(){
         ImageButton button = findViewById(R.id.imageButton);
         button.setOnClickListener(
                 new View.OnClickListener() {
@@ -167,6 +184,8 @@ public class Play extends AppCompatActivity {
                 }
         );
     }
+
+     */
 
 
 

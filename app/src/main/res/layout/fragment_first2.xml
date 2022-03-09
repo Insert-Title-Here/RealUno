@@ -20,9 +20,55 @@
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:text="stuff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_first" />
+
+    <HorizontalScrollView
+        android:layout_width="409dp"
+        android:layout_height="219dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:background="#c1c1c1"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/btn_star_big_on"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:background="#c1c1c1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:src="@android:drawable/btn_star_big_on"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:background="#c1c1c1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:src="@android:drawable/btn_star_big_on"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:background="#c1c1c1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:src="@android:drawable/btn_star_big_on"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:background="#c1c1c1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:src="@android:drawable/btn_star_big_on"/>
+    </HorizontalScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
